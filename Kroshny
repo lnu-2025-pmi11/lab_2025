@@ -3,7 +3,7 @@ using namespace std;
 int main() {
 	int n;
 	int numbers[20];
-	cout << "Enter number from 5 to 20";
+	cout << "Enter number from 5 to 20:";
 	cin >> n;
 
 	for (int i = 0; i < n; i++) {
