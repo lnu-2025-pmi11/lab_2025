@@ -44,8 +44,8 @@ int main() {
 		sum += numbers[i];
 	}
 	cout << "Sum : " << sum << endl;
-	double averge = sum / N;
-	cout << "Average : " << averge << endl;
+	double averge = (double)sum / N;
+	cout << "Average : " << setprecision(4) <<averge << endl;
 
 	int count = 0;
 	cout << "Bigger than average numbers: ";
