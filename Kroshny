@@ -10,40 +10,33 @@ int main() {
 		cout << "Enter number " << (i + 1) << ": ";
 		cin >> numbers[i];
 	}
-	int sum=0;
+	int sum = 0;
 	for (int i = 0; i < n; i++) {
 		sum += numbers[i];
-		cout << "The sum is: " << sum << endl;
 	}
+	
+		
+		cout << "The sum is: " << sum << endl;
+	
 	int average = sum / n;
 	cout << "The average is: " << average << endl;
 
-	int bigger;
-	int smaller;
+
 	for (int i = 0; i < n; i++) {
 		if (numbers[i] > average) {
-			bigger = numbers[i];
-			cout << "Bigger than average: " << bigger << endl;
-		}
-		else {
-			smaller = numbers[i];
-			cout << "Smaller than average: " << smaller << endl;
+			
+			cout << "Numbers bigger than average: " << numbers[i] << endl;
 		}
 	}
-	int biggerCount = 0;
-	for (int i = 0; i < n; i++) {
-		if (numbers[i] > average) {
-			biggerCount++;
-		}
-		cout << " numbers bigger than average." << biggerCount <<  endl;
-	}
-	int smallerCount = 0;
+		
 	for (int i = 0; i < n; i++) {
 		if (numbers[i] < average) {
-			smallerCount++;
+		
+			cout << "Numbers smaller than average: " << numbers[i] << endl;
 		}
-		cout << " numbers smaller than average." << smallerCount << endl;
 	}
+	
+
 	return 0;
 
 }
