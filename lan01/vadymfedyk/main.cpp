@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include<iomanip>
 using namespace std;
 
 
@@ -20,7 +20,7 @@ int main() {
   }
   
   double avarage = sm/n;
-  
+  cout << fixed << setprecision(2);
   cout << "Your array: ";
   for(int a = 0; a < n; a++){
     cout << arr[a] << " ";
@@ -51,7 +51,5 @@ int main() {
   return 0;
 
 }
-
-
 
  
