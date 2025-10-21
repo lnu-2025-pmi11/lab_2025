@@ -1,0 +1,46 @@
+#include<iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	int N;
+	cout << "input the size of array from 5 to 20 " << endl;
+	cin >> N;
+    while (N < 5 || N > 20) {
+		cout << "your array must be the size from 5 to 20 " << endl;
+		cin >> N;
+	}
+
+	double* num = new double[N];
+
+	for (int i = 0; i < N; i++) {
+		num[i] = rand() % 201 - 100; 
+	}
+
+	for (int i = 0; i < N; i++) {
+		cout << num[i] << " ";
+	}
+	cout << endl;
+	double sum = 0;
+	for (int i = 0; i < N; i++) {
+		sum += num[i];
+	}
+	cout << "sum of numbers is " << sum << endl;
+	double avg = sum / N;
+	cout << "avarage number is " << fixed << setprecision(2) << avg << endl;
+
+	int smallerNum = 0;
+	int biggerNum = 0;
+	for (int i = 0; i < N; i++) {
+		if (num[i] < avg)
+			smallerNum++;
+	}
+	for (int i = 0; i < N; i++) {
+		if (num[i] > avg)
+			biggerNum++;
+	}
+
+	cout << "amount of numbers smaller than avarage is " << smallerNum << endl;
+	cout << "amount of numbers bigger than avarage is " << biggerNum << endl;
+
+}
