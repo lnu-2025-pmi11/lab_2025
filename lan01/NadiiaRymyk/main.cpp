@@ -29,7 +29,7 @@ int main() {
 		cout << "Сума елементів масиву: " << sum << endl;
 
 
-		double average = static_cast<double>(sum) / N;
+		double average = sum / N;
 		cout << fixed << setprecision(2);
 		cout << "Середнє арифметичне: " << average << endl;
 
@@ -38,8 +38,6 @@ int main() {
 		for (int a = 0; a < N; a++) {
 			if (numbers[a] > average) greaterCount++;
 			else if (numbers[a] < average) smallerCount++;
-
-
 		}
 		cout << "Кількість елементів більших за середнє: " << greaterCount << endl;
 		cout << "Кількість елементів менших за середнє: " << smallerCount << endl;
