@@ -40,7 +40,8 @@ public:
     bool operator>(const Rectangle& r) const {
         return this->Area() > r.Area();
     }
-
+    ~Rectangle(){
+    }
 };
 
 
@@ -127,5 +128,6 @@ int main()
     cout << "Check the OutFile :)";
     return 0;
 }
+
 
 
