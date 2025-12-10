@@ -1,0 +1,5 @@
+Dell XPS 15;16
+ASUS ROG Strix;32
+MacBook Pro M2;8
+HP Pavilion Gaming;16
+Lenovo Legion 5;24
