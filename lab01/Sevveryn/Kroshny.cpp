@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int n;
+	int numbers[20];
+	cout << "Enter number from 5 to 20:";
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		cout << "Enter number " << (i + 1) << ": ";
+		cin >> numbers[i];
+	}
+	int sum = 0;
+	for (int i = 0; i < n; i++) {
+		sum += numbers[i];
+	}
+	
+		
+		cout << "The sum is: " << sum << endl;
+	
+	int average = sum / n;
+	cout << "The average is: " << average << endl;
+
+
+	for (int i = 0; i < n; i++) {
+		if (numbers[i] > average) {
+			
+			cout << "Numbers bigger than average: " << numbers[i] << endl;
+		}
+	}
+		
+	for (int i = 0; i < n; i++) {
+		if (numbers[i] < average) {
+		
+			cout << "Numbers smaller than average: " << numbers[i] << endl;
+		}
+	}
+	
+
+	return 0;
+
+}
