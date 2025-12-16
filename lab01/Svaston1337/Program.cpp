@@ -9,23 +9,23 @@ int main() {
 	SetConsoleOutputCP(1251);
 
 	int n = 0;
-	cout << "Ââåä³òü ðîçì³ð ìàñèâó N (â³ä 5 - 20): ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ Ã°Ã®Ã§Ã¬Â³Ã° Ã¬Ã Ã±Ã¨Ã¢Ã³ N (Ã¢Â³Ã¤ 5 - 20): ";
 	cin >> n;
 
 	do
 	{
 	int n;
-	cout << "Ââåä³òü ðîçì³ð ìàñèâó N (â³ä 5 - 20): ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ Ã°Ã®Ã§Ã¬Â³Ã° Ã¬Ã Ã±Ã¨Ã¢Ã³ N (Ã¢Â³Ã¤ 5 - 20): ";
 	cin >> n;
 	} while(4 < n and n < 21);
 
 	int* numbers = new int[n];
 	for (int i = 0; i < n; i++) {
-		cout << "Ââåä³òü " << i + 1 << " åëåìåíò: " ;
+		cout << "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ " << i + 1 << " Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²: " ;
 		cin >> numbers[i];
 	}
 
-	cout << "Âèâåäåíèé ìàñèâ: ";
+	cout << "Ã‚Ã¨Ã¢Ã¥Ã¤Ã¥Ã­Ã¨Ã© Ã¬Ã Ã±Ã¨Ã¢: ";
 	for (int i = 0; i < n; i++) {
 		cout << numbers[i] << " ";
 	}
@@ -35,14 +35,14 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		summa += numbers[i];
 	}
-	cout << "Ñóìà åëåìåíò³â: " << summa << endl;
+	cout << "Ã‘Ã³Ã¬Ã  Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Â³Ã¢: " << summa << endl;
 
 	float average = 0;
 	for (int i = 0; i < n; i++) {
 		average = summa / n;
 	}
 	cout << fixed << setprecision(2);
-	cout << "Ñåðåäíº àðèôìåòè÷íå: " << average << endl;
+	cout << "Ã‘Ã¥Ã°Ã¥Ã¤Ã­Âº Ã Ã°Ã¨Ã´Ã¬Ã¥Ã²Ã¨Ã·Ã­Ã¥: " << average << endl;
 
 	int minAverage = numbers[0];
 	int maxAverage = numbers[0];
@@ -52,8 +52,9 @@ int main() {
 
 		if (numbers[i] < average) index_minAverage++;
 	}
-	cout << "Ê³ëüê³ñòü ÷èñåë, ÿê³ á³ëüø³ çà ñåðåäíº àðèôìåòè÷íå: " << index_maxAverage << endl;
-	cout << "Ê³ëüê³ñòü ÷èñåë, ÿê³ ìåíø³ çà ñåðåäíº àðèôìåòè÷íå: " << index_minAverage << endl;
+	cout << "ÃŠÂ³Ã«Ã¼ÃªÂ³Ã±Ã²Ã¼ Ã·Ã¨Ã±Ã¥Ã«, Ã¿ÃªÂ³ Ã¡Â³Ã«Ã¼Ã¸Â³ Ã§Ã  Ã±Ã¥Ã°Ã¥Ã¤Ã­Âº Ã Ã°Ã¨Ã´Ã¬Ã¥Ã²Ã¨Ã·Ã­Ã¥: " << index_maxAverage << endl;
+	cout << "ÃŠÂ³Ã«Ã¼ÃªÂ³Ã±Ã²Ã¼ Ã·Ã¨Ã±Ã¥Ã«, Ã¿ÃªÂ³ Ã¬Ã¥Ã­Ã¸Â³ Ã§Ã  Ã±Ã¥Ã°Ã¥Ã¤Ã­Âº Ã Ã°Ã¨Ã´Ã¬Ã¥Ã²Ã¨Ã·Ã­Ã¥: " << index_minAverage << endl;
 
 	return 0;
+
 }
