@@ -1,0 +1,85 @@
+#include<iostream>
+#include<string>
+#include<ctime>
+#include<cmath>
+#include<fstream>
+#include<Windows.h>
+using namespace std;
+class book{
+	private:
+		string title;
+		string author;
+		 int year;
+	public:
+	    book(){
+			title = "Unknown";
+			author = "Unknown";
+			year = 0;
+		}
+		book(string t, string a, int y): title(t), author(a), year(y) {}
+		int getAge() const {
+			time_t t = time(0);
+			tm* now = localtime(&t);
+			int currentYear = now->tm_year + 1900;
+			return currentYear - year;
+		}
+		bool operator<(const Book& other) const {
+			return this->year < other.year;
+		}
+		bool operator>(const Book& other) const {
+			return this->year > other.year;
+		}
+		friend ostream& operator<<(ostream& os, const Book& book) {
+			os << "Title: \"" << book.title << "\""
+				<< " | Author: " << book.author
+				<< " | Year: " << book.year
+				<< " (" << book.getAge() << " years old)";
+			return os;
+		}
+}
+int main() {
+	SetConsoleCP(1251);
+	const int SIZE = 5;
+	Book library[SIZE] = {
+		Book("Harry Potter", "J.K. Rowling", 1997),
+		Book("The Kobzar", "Taras Shevchenko", 1840),
+		Book("kiborgy", "Kateryna kycher", 2005),
+		Book("The Arsik", "Maksim Rubalko", 2007),
+		Book("Dune", "Frank Herbert", 1965)
+		}
+	Book oldestBook = library[0];
+	for (const auto& book : library) {
+		if (book < oldestBook) {
+			oldestBook = book;
+		}
+	}
+
+	double totalYears = 0;
+	for (const auto& book : library) {
+		totalYears += book.getYear();
+	}
+	double averageYear = totalYears / library.size();
+	cout << "=== Library Report ===" << endl;
+	cout << "Oldest Book: " << oldestBook << endl;
+	cout << "Average Year: " << averageYear << endl;
+
+	cout << "\n=== SORTED LIBRARY ===" << endl;
+	for (int i = 0; i < SIZE; i++) {
+		cout << library[i] << endl;
+	}
+	ofstream outFile("Book.txt");
+	if (outFile.is_open()) {
+		outFile << "=== Library Report ===" << endl;
+		outFile << "Oldest Book: " << oldestBook << endl;
+		outFile << "Average Year: " << averageYear << endl;
+		outFile << "\n--- Sorted List ---" << endl;
+		for (int i = 0; i < SIZE; i++) {
+			outFile << library[i] << endl;
+		}
+		outFile.close();
+	}
+	else {
+		cerr << "Error writing to file!" << endl;
+	}
+
+	return 0;
