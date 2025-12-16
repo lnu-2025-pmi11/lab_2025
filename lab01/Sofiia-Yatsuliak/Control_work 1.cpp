@@ -9,17 +9,17 @@ int main() {
     int N;
 
     do {
-        cout << "Ââåä³òü ğîçì³ğ ìàñèâó N(â³ä 5 äî 20): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ Ã°Ã®Ã§Ã¬Â³Ã° Ã¬Ã Ã±Ã¨Ã¢Ã³ N(Ã¢Â³Ã¤ 5 Ã¤Ã® 20): ";
         cin >> N;
         if (N < 5 || N > 20) {
-            cout << "Ğîçì³ğ ìàñèâó ìàº áóòè â³ä 5 äî 20.\n";
+            cout << "ÃÃ®Ã§Ã¬Â³Ã° Ã¬Ã Ã±Ã¨Ã¢Ã³ Ã¬Ã Âº Ã¡Ã³Ã²Ã¨ Ã¢Â³Ã¤ 5 Ã¤Ã® 20.\n";
         }
     } while (N < 5 || N > 20);
 
     int numbers[20];
 
     for (int i = 0; i < N; i++) {
-        cout << "Ââåä³òü åëåìåíò [" << i << "]: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã² [" << i << "]: ";
         cin >> numbers[i];
     }
     
@@ -35,15 +35,16 @@ int main() {
         else if (numbers[i] < average)
             smallerCount++;
     }
-    cout << "\nÂâåäåíèé ìàñèâ: ";
+    cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¥Ã­Ã¨Ã© Ã¬Ã Ã±Ã¨Ã¢: ";
     for (int i = 0; i < N; i++) {
         cout << numbers[i] << " ";
     }
 
-    cout << "\nÑóìà åëåìåíò³â: " << sum;
-    cout << "\nÑåğåäíº àğèôìåòè÷íå: " << fixed << setprecision(2) << average;
-    cout << "\nÁ³ëüøèõ çà ñåğåäíº: " << greaterCount;
-    cout << "\nÌåíøèõ çà ñåğåäíº: " << smallerCount << endl;
+    cout << "\nÃ‘Ã³Ã¬Ã  Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã²Â³Ã¢: " << sum;
+    cout << "\nÃ‘Ã¥Ã°Ã¥Ã¤Ã­Âº Ã Ã°Ã¨Ã´Ã¬Ã¥Ã²Ã¨Ã·Ã­Ã¥: " << fixed << setprecision(2) << average;
+    cout << "\nÃÂ³Ã«Ã¼Ã¸Ã¨Ãµ Ã§Ã  Ã±Ã¥Ã°Ã¥Ã¤Ã­Âº: " << greaterCount;
+    cout << "\nÃŒÃ¥Ã­Ã¸Ã¨Ãµ Ã§Ã  Ã±Ã¥Ã°Ã¥Ã¤Ã­Âº: " << smallerCount << endl;
 
     return 0;
+
 }
