@@ -1,4 +1,0 @@
-Largest circle radius: 4.25
-Largest circle area: 56.7163
-Sum of areas: 105.386
-Average circumference: 14.13
