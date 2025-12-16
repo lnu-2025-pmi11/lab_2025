@@ -36,3 +36,4 @@ int main() {
     cout << "\nAmount of nombers < Averege: " << smaller << endl;
     return 0;
 }
+
