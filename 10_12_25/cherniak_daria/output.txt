@@ -1,0 +1,20 @@
+Most powerful laptop:
+Model: Dell, RAM: 0 GB
+
+Average RAM: 0.000000 GB
+
+After upgrades:
+Model: Dell, RAM: 0 GB
+Model: Dell, RAM: 8 GB
+Model: Dell, RAM: 0 GB
+Model: Dell, RAM: 4 GB
+Model: Dell, RAM: 0 GB
+
+Gaming laptops (RAM > 16 GB):
+
+All laptops:
+Model: Dell, RAM: 0 GB
+Model: Dell, RAM: 8 GB
+Model: Dell, RAM: 0 GB
+Model: Dell, RAM: 4 GB
+Model: Dell, RAM: 0 GB
